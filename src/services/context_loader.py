@@ -1,4 +1,4 @@
-from pathlib import Path
+from src.config.settings import CONTEXT_FILE
 
 
 class ContextLoader:
@@ -6,14 +6,14 @@ class ContextLoader:
     @staticmethod
     def load_context():
 
-        project_root = Path(__file__).resolve().parent.parent.parent
+        print(f"\nLOADING FILE: {CONTEXT_FILE}\n")
 
-        context_path = project_root / "00_CONTEXT" / "PROJECT_CONTEXT.md"
+        if not CONTEXT_FILE.exists():
 
-        if not context_path.exists():
             raise FileNotFoundError(
-                f"Context file not found: {context_path}"
+                f"Context file not found: {CONTEXT_FILE}"
             )
 
-        with open(context_path, "r", encoding="utf-8") as file:
+        with open(CONTEXT_FILE, "r", encoding="utf-8") as file:
+
             return file.read()

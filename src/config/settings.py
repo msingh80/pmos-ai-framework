@@ -1,0 +1,9 @@
+from pathlib import Path
+
+PROJECT_NAME = "HACKATHON_DEMO"
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+PROJECT_PATH = PROJECT_ROOT / "05_PROJECTS" / PROJECT_NAME
+
+CONTEXT_FILE = PROJECT_PATH / "PROJECT_CONTEXT.md"

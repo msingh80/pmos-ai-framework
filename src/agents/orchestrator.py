@@ -1,5 +1,5 @@
-from src.models.project_state import ProjectState
 from src.services.context_loader import ContextLoader
+from src.parsers.context_parser import ContextParser
 
 
 class PMOrchestrator:
@@ -8,12 +8,6 @@ class PMOrchestrator:
 
         context = ContextLoader.load_context()
 
-        print("\n========== PROJECT CONTEXT ==========\n")
-
-        print(context[:1000])
-
-        print("\n=====================================\n")
-
-        state = ProjectState()
+        state = ContextParser.parse(context)
 
         return state

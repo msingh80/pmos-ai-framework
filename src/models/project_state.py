@@ -3,10 +3,10 @@ from pydantic import BaseModel
 
 class ProjectState(BaseModel):
 
-    project_name: str = "PMOS AI Framework"
+    project_name: str = ""
 
-    current_phase: str = "Initiation"
+    current_phase: str = ""
 
-    current_activity: str = "PM-01"
+    current_activity: str = ""
 
-    assigned_agent: str = "Planning Agent"
+    assigned_agent: str = ""
