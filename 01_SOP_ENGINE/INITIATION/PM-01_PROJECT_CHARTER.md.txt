@@ -1,0 +1,111 @@
+# SOP Activity Definition
+
+## Activity ID
+
+PM-01
+
+---
+
+## Activity Name
+
+Project Charter Drafting
+
+---
+
+## SDLC Phase
+
+Initiation
+
+---
+
+## Delivery Models
+
+- Scrum
+- Waterfall
+- Hybrid
+
+---
+
+## Assigned Agent
+
+Planning Agent
+
+---
+
+## Objective
+
+Generate the Project Charter based on approved project documents.
+
+---
+
+## Inputs
+
+Mandatory:
+
+- Project Charter Template (if available)
+- SOW / Contract / MSA
+
+Optional:
+
+- Discovery Notes
+- Workshop Notes
+
+---
+
+## Entry Criteria
+
+- Project approved
+- SOW available
+- Sponsor identified
+
+---
+
+## SOP Rules
+
+1. Read uploaded templates.
+2. Confirm structure.
+3. Ask clarification questions.
+4. Use SOW as source of truth.
+5. Never invent budget or dates.
+6. Mark missing data:
+
+[NEEDS INPUT – reason]
+
+---
+
+## Output
+
+- Project Charter
+- Assumptions
+- Risks
+- Sign-off section
+
+---
+
+## Escalation Rules
+
+Escalate when:
+
+- Budget missing
+- Sponsor missing
+- Timeline unavailable
+
+---
+
+## Traceability
+
+Source:
+
+PM AI Assistant SOP v1.0
+
+Section:
+
+PM-01
+
+---
+
+## Next Possible Activities
+
+- PM-02
+- PM-03
+- PM-04

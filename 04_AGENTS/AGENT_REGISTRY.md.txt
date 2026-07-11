@@ -1,0 +1,230 @@
+# AGENT REGISTRY
+
+## Purpose
+
+This document defines all PMOS agents, their responsibilities, inputs, outputs, and escalation rules.
+
+---
+
+# AGENT-01: PM Orchestrator Agent
+
+## Objective
+
+Acts as the central brain of PMOS.
+
+Determines:
+
+- Current SDLC phase
+- Applicable SOP activity
+- Readiness status
+- Next activity
+- Agent routing
+
+## Inputs
+
+- PM SOP
+- Project Context
+- Uploaded documents
+- Execution State
+
+## Outputs
+
+- Current stage
+- Applicable PM activity
+- Readiness report
+- Agent assignment
+
+## Escalation Rules
+
+Escalate when:
+
+- Stage cannot be identified
+- Multiple SOP activities apply
+- Required documents are missing
+
+---
+
+# AGENT-02: Knowledge Agent
+
+## Objective
+
+Maintain project memory and context.
+
+## Inputs
+
+- BRD
+- FSD
+- SOW
+- MOM
+- User stories
+- Project artifacts
+
+## Outputs
+
+- Updated PROJECT_CONTEXT.md
+- Updated EXECUTION_STATE.md
+
+## Escalation Rules
+
+Escalate when:
+
+- Conflicting information exists
+- Source documents differ
+
+---
+
+# AGENT-03: Planning Agent
+
+## Objective
+
+Generate planning artifacts.
+
+## SOP Coverage
+
+- PM-05
+- PM-06
+- PM-08
+- PM-09
+- PM-10
+- PM-31
+- PM-32
+
+## Outputs
+
+- RTM
+- WBS
+- Milestone plan
+- Resource plan
+- Communication plan
+- Schedule baseline
+
+---
+
+# AGENT-04: Governance Agent
+
+## Objective
+
+Manage governance and reporting.
+
+## SOP Coverage
+
+- PM-07
+- PM-18
+- PM-19
+- PM-20
+- PM-21
+- PM-22
+- PM-23
+- PM-24
+- PM-25
+
+## Outputs
+
+- RAID
+- WSR
+- KPI dashboard
+- Timeline analysis
+- Budget reports
+
+---
+
+# AGENT-05: Communication Agent
+
+## Objective
+
+Generate communication artifacts.
+
+## SOP Coverage
+
+- PM-12
+- PM-13
+- PM-15
+- PM-37
+- PM-38
+- PM-39
+- PM-43
+
+## Outputs
+
+- MOM
+- Emails
+- Escalations
+- Notifications
+
+---
+
+# AGENT-06: Change Management Agent
+
+## Objective
+
+Manage scope and change requests.
+
+## SOP Coverage
+
+- PM-14
+
+## Outputs
+
+- Change impact analysis
+- Scope updates
+- Artifact updates
+
+---
+
+# AGENT-07: Closure Agent
+
+## Objective
+
+Manage project closure.
+
+## SOP Coverage
+
+- PM-26
+- PM-27
+- PM-28
+- PM-29
+- PM-30
+- PM-46
+- PM-47
+
+## Outputs
+
+- Closure report
+- Lessons learned
+- PIR
+- Runbook
+
+---
+
+# AGENT-08: Automation Agent
+
+## Objective
+
+Coordinate external tools.
+
+## SOP Coverage
+
+- PM-48
+- PM-49
+- PM-50
+- PM-51
+
+## Outputs
+
+- RAID automation
+- PowerPoint generation
+- Jira synchronization
+- SharePoint organization
+
+---
+
+# Global Rules
+
+All agents must:
+
+1. Follow PM SOP.
+2. Read PMOS_MASTER_CONTEXT.md.
+3. Verify templates.
+4. Maintain traceability.
+5. Update logs.
+6. Escalate uncertainties.
