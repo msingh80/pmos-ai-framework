@@ -97,7 +97,7 @@ Out of Scope:
 
 ## Current Project State
 
-Current Activity:
+Current Activity:PM-07
 
 Last Completed Activity:
 

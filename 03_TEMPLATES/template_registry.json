@@ -1,0 +1,36 @@
+{
+    "PM-01": {
+        "folder": "PM-01_PROJECT_CHARTER",
+        "template": "PROJECT_CHARTER_TEMPLATE.docx"
+    },
+
+    "PM-02": {
+        "folder": "PM-02_STAKEHOLDER_RACI",
+        "template": "RACI_TEMPLATE.xlsx"
+    },
+
+    "PM-03": {
+        "folder": "PM-03_BUSINESS_CASE",
+        "template": "BUSINESS_CASE_TEMPLATE.docx"
+    },
+
+    "PM-04": {
+        "folder": "PM-04_KICKOFF",
+        "template": "KICKOFF_TEMPLATE.pptx"
+    },
+
+    "PM-05": {
+        "folder": "PM-05_RTM",
+        "template": "RTM_TEMPLATE.xlsx"
+    },
+
+    "PM-06": {
+        "folder": "PM-06_WBS",
+        "template": "WBS_TEMPLATE.xlsx"
+    },
+
+    "PM-07": {
+        "folder": "PM-07_RAID",
+        "template": "RAID_TEMPLATE.xlsx"
+    }
+}

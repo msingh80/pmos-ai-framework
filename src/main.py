@@ -5,7 +5,7 @@ def main():
 
     orchestrator = PMOrchestrator()
 
-    state = orchestrator.identify_current_activity()
+    state =  orchestrator.run()
 
     print("\n========== PMOS ==========\n")
 
