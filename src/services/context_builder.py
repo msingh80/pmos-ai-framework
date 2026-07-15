@@ -19,7 +19,9 @@ class ContextBuilder:
 
         documents = DocumentLoader.get_documents()
 
-        document_content = DocumentReader.read_documents()
+        document_content = (
+            DocumentReader.read_documents()
+        )
 
         context = f"""
 ==================================================
@@ -67,6 +69,7 @@ DOCUMENT CONTENT:
 
 {document_content}
 
+==================================================
 """
 
         return context
