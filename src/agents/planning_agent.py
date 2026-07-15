@@ -1,17 +1,18 @@
-from src.services.template_loader import TemplateLoader
-from src.services.prompt_loader import PromptLoader
+from src.services.context_builder import ContextBuilder
+from src.services.export_service import ExportService
 
 
 class PlanningAgent:
 
     def execute(self, state):
 
-        template = TemplateLoader.get_template(
-            state.current_activity
+        context = ContextBuilder.build_context(
+            state
         )
 
-        prompt = PromptLoader.get_prompt(
-            state.current_activity
+        output_file = ExportService.export_context(
+            state.current_activity,
+            context
         )
 
         print("\n===== Planning Agent =====\n")
@@ -27,13 +28,16 @@ class PlanningAgent:
         )
 
         print(
-            f"\nTemplate Details:\n"
-            f"{template}"
+            f"\nAI package exported to:\n"
+            f"{output_file}"
         )
 
+        print("\n===== AI PACKAGE =====\n")
+
+        print(context)
+
         print(
-            f"\nPrompt:\n"
-            f"{prompt[:300]}"
+            "\n===== END AI PACKAGE =====\n"
         )
 
         print(
