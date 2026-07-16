@@ -1,30 +1,39 @@
 from pathlib import Path
 
 
-class ExportService:
+class CharterExportService:
 
     @staticmethod
-    def export_context(activity_id, content):
+    def export(charter):
 
         root = Path(__file__).resolve().parents[2]
 
         output_folder = root / "09_OUTPUTS"
 
         output_folder.mkdir(
+
             exist_ok=True
+
         )
 
         output_file = (
+
             output_folder /
-            f"{activity_id}_AI_PACKAGE.md"
+
+            "PROJECT_CHARTER.md"
+
         )
 
         with open(
+
             output_file,
+
             "w",
+
             encoding="utf-8"
+
         ) as file:
 
-            file.write(content)
+            file.write(charter)
 
         return output_file

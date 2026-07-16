@@ -1,21 +1,42 @@
 from src.agents.orchestrator import PMOrchestrator
+from src.services.timeline_service import TimelineService
 
 
 def main():
 
     orchestrator = PMOrchestrator()
 
-    state =  orchestrator.run()
+    state = orchestrator.run()
 
     print("\n========== PMOS ==========\n")
 
-    print(f"Project           : {state.project_name}")
-    print(f"Current Phase     : {state.current_phase}")
-    print(f"Current Activity  : {state.current_activity}")
-    print(f"Assigned Agent    : {state.assigned_agent}")
+    print(
+        f"Project           : "
+        f"{state.project_name}"
+    )
 
-    print("\n==========================\n")
+    print(
+        f"Current Phase     : "
+        f"{state.current_phase}"
+    )
+
+    print(
+        f"Current Activity  : "
+        f"{state.current_activity}"
+    )
+
+    print(
+        f"Assigned Agent    : "
+        f"{state.assigned_agent}"
+    )
+
+    TimelineService.show_history()
+
+    print(
+        "\n==========================\n"
+    )
 
 
 if __name__ == "__main__":
+
     main()

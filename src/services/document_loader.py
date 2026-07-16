@@ -16,16 +16,20 @@ class DocumentLoader:
 
             return documents
 
-        for file in input_folder.iterdir():
+        for file in input_folder.rglob("*"):
 
             if file.is_file():
 
                 documents.append(
+
                     {
                         "name": file.name,
+
                         "path": str(file),
+
                         "extension": file.suffix
                     }
+
                 )
 
         return documents

@@ -8,7 +8,7 @@ CURRENT PHASE:
 Initiation
 
 CURRENT ACTIVITY:
-PM-01
+PM-02
 
 ASSIGNED AGENT:
 Planning Agent
@@ -17,38 +17,23 @@ Planning Agent
 
 TEMPLATE DETAILS:
 
-{'folder': 'PM-01_PROJECT_CHARTER', 'template': 'PROJECT_CHARTER_TEMPLATE.docx'}
+{'folder': 'PM-02_STAKEHOLDER_RACI', 'template': 'RACI_TEMPLATE.xlsx'}
 
 ==================================================
 
 PROMPT:
 
-# PM-01 : Project Charter Drafting
+# Activity: PM-01
 
-## Objective
+Objective:
 
-Create the project charter.
+Inputs Required:
 
-## Inputs
+Templates Required:
 
-- SOW
-- BRD
-- Client discussions
+Instructions for AI:
 
-## Templates
-
-- Project Charter Template
-
-## AI Instructions
-
-1. Review all available documents.
-2. Identify stakeholders.
-3. Capture milestones.
-4. Generate the charter.
-
-## Expected Output
-
-- Project Charter document
+Expected Output:
 
 ==================================================
 

@@ -1,6 +1,3 @@
-from pathlib import Path
-
-from docx import Document
 from pypdf import PdfReader
 from openpyxl import load_workbook
 
@@ -8,91 +5,79 @@ from openpyxl import load_workbook
 class DocumentReader:
 
     @staticmethod
-    def read_documents():
-
-        root = Path(__file__).resolve().parents[2]
-
-        input_folder = root / "INPUT_DOCUMENTS"
+    def read_documents(documents):
 
         content = ""
 
-        if not input_folder.exists():
+        for document in documents:
 
-            return content
+            file = document["path"]
 
-        for file in input_folder.iterdir():
-
-            if file.is_file():
+            try:
 
                 content += (
-                    f"\n\n===== {file.name} =====\n\n"
+                    f"\n\n===== "
+                    f"{document['name']} "
+                    f"=====\n\n"
                 )
 
-                try:
+                if file.endswith(".md"):
 
-                    if file.suffix == ".md":
+                    with open(
+                        file,
+                        "r",
+                        encoding="utf-8"
+                    ) as f:
 
-                        with open(
-                            file,
-                            "r",
-                            encoding="utf-8"
-                        ) as f:
+                        content += f.read()
 
-                            content += f.read()
+                elif file.endswith(".pdf"):
 
-                    elif file.suffix == ".docx":
+                    pdf = PdfReader(file)
 
-                        content += (
-                            "\nINVALID DOCX FILE\n"
-                        )
+                    for page in pdf.pages:
 
-                    elif file.suffix == ".pdf":
+                        text = page.extract_text()
 
-                        pdf = PdfReader(file)
-
-                        for page in pdf.pages:
-
-                            text = page.extract_text()
-
-                            if text:
-
-                                content += (
-                                    text + "\n"
-                                )
-
-                    elif file.suffix == ".xlsx":
-
-                        workbook = load_workbook(
-                            file,
-                            data_only=True
-                        )
-
-                        for sheet in workbook:
+                        if text:
 
                             content += (
-                                f"\n--- SHEET: "
-                                f"{sheet.title} ---\n"
+                                text + "\n"
                             )
 
-                            for row in sheet.iter_rows(
-                                values_only=True
-                            ):
+                elif file.endswith(".xlsx"):
 
-                                content += (
-                                    str(row) + "\n"
-                                )
+                    workbook = load_workbook(
+                        file,
+                        data_only=True
+                    )
 
-                    else:
+                    for sheet in workbook:
 
                         content += (
-                            "Unsupported file type.\n"
+                            f"\n--- SHEET: "
+                            f"{sheet.title} ---\n"
                         )
 
-                except Exception as error:
+                        for row in sheet.iter_rows(
+                            values_only=True
+                        ):
+
+                            content += (
+                                str(row) + "\n"
+                            )
+
+                else:
 
                     content += (
-                        f"\nERROR READING FILE: "
-                        f"{error}\n"
+                        "\nSkipped file type.\n"
                     )
+
+            except Exception as error:
+
+                content += (
+                    f"\nERROR READING FILE: "
+                    f"{error}\n"
+                )
 
         return content

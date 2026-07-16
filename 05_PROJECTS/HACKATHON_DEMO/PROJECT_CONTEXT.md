@@ -2,7 +2,7 @@ Project Name: PMOS AI Framework
 
 Current SDLC Phase: Initiation
 
-Current Activity: PM-01
+Current Activity: PM-02
 
 Assigned Agent: Planning Agent
 

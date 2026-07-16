@@ -1,0 +1,79 @@
+1-Command 1 (Recommended) – PMOS Execution Dashboard
+Show the current PMOS Execution Dashboard.
+
+Based on the complete conversation history, uploaded project documents, PM SOP and generated artifacts, provide a consolidated execution dashboard containing:
+
+1. Current SDLC Stage
+2. Current PM SOP Category
+3. Current PM SOP Activity
+4. Completed PM SOP Activities
+5. Pending PM SOP Activities
+6. Generated Deliverables
+7. Pending Deliverables
+8. Project Health (RAG Status)
+9. Milestone / Sprint Status
+10. Open Risks
+11. Open Issues
+12. Open Dependencies
+13. Open Action Items
+14. Pending Approvals
+15. Key Decisions
+16. Recent Changes
+17. Recommended Next PM Activity
+
+Do not regenerate documents.
+Only summarize the current execution status from the project context.
+
+
+
+
+2-Command 2 – PM Activity History
+
+Show the complete PM Activity History for this project.
+
+For each completed PM SOP activity provide:
+
+- PM SOP ID
+- Activity Name
+- Status
+- Deliverable Generated
+- Input Documents Used
+- Templates Used
+- Date/Conversation Reference
+- Key Outcome
+
+Present the result in chronological order.
+
+
+3- Command 3 – Deliverable Register
+
+Show the Project Deliverable Register.
+
+Include:
+
+- Deliverable Name
+- PM SOP Activity
+- Status
+- Source Documents
+- Template Used
+- Current Version
+- Remarks
+
+4- Command 4 – Governance Dashboard
+
+Show the current Governance Dashboard.
+
+Summarize:
+
+- Project Health
+- Risks
+- Issues
+- Dependencies
+- Action Items
+- Decisions
+- Assumptions
+- Pending Client Approvals
+- Upcoming Milestones
+- Critical Attention Areas
+
+Highlight any governance gaps requiring immediate PM attention.

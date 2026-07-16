@@ -1,0 +1,23 @@
+{
+    "PM-01": [
+        "BRD",
+        "SOW",
+        "Meeting_Transcript"
+    ],
+
+    "PM-02": [
+        "BRD",
+        "Meeting_Transcript",
+        "SOW"
+    ],
+
+    "PM-03": [
+        "FSD",
+        "Sprint_Plan"
+    ],
+
+    "PM-04": [
+        "FSD",
+        "Sprint_Plan"
+    ]
+}

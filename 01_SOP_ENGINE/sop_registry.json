@@ -1,0 +1,43 @@
+{
+    "PM-01": {
+
+        "name": "Project Charter Drafting",
+
+        "phase": "planning",
+
+        "agent": "ProjectCharterAgent",
+
+        "artifact": "PROJECT_CHARTER.md",
+
+        "documents": [
+
+            "BRD",
+
+            "SOW",
+
+            "Meeting_Transcript"
+
+        ]
+    },
+
+    "PM-02": {
+
+        "name": "Stakeholder Identification & RACI",
+
+        "phase": "planning",
+
+        "agent": "StakeholderAgent",
+
+        "artifact": "STAKEHOLDER_REGISTER.md",
+
+        "documents": [
+
+            "BRD",
+
+            "SOW",
+
+            "Meeting_Transcript"
+
+        ]
+    }
+}
